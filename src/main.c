@@ -34,8 +34,8 @@ SDL_Texture* load_texture(const char* filename) {
 }
 
 // Draw a texture at the specified location
-void draw_texture(SDL_Texture* texture, int x, int y) {
-    SDL_Rect rect = { x, y, 0, 0 };
+void draw_texture(SDL_Texture* texture, int x, int y,int w, int h) {
+    SDL_Rect rect = { x, y, h, w };
     SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
     SDL_RenderCopy(renderer, texture, NULL, &rect);
 }
@@ -161,14 +161,14 @@ int main(int argc, char* argv[]) {
         // Clear the screen and draw the background and character
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
         SDL_RenderClear(renderer);
-        draw_texture(background_texture, 0, 0);
-        draw_texture(character_texture, character_x, character_y);
+        draw_texture(background_texture, 0, 0,0,0);
+        draw_texture(character_texture, character_x, character_y,0,0);
 
 
         // Draw the obstacle if the character is not dead
         if (!is_dead) {
 
-          draw_texture(obstacle_texture, obstacle_x, obstacle_y);            obstacle_x -= 2;
+          draw_texture(obstacle_texture, obstacle_x, obstacle_y,0,0);            obstacle_x -= 2;
             if (obstacle_x < -350) {
 
 

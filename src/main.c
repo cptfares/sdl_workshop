@@ -4,10 +4,7 @@
 #include <stdio.h>
 #include <SDL_ttf.h>
 
-#define MAX(X, Y) (((X) > (Y)) ? (X) : (Y))
-#define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
 
-#define MAX_BULLETS 1000
 #define FONT_PATH   "assets/pacifico/Pacifico.ttf"
 
 

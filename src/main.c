@@ -95,7 +95,7 @@ int main(int argc, char* argv[]) {
     // Load background, character, and obstacle images
     SDL_Texture* background_texture = load_texture("assets/background1.png");
     SDL_Texture* character_texture = load_texture("assets/oui.png");
-    SDL_Texture* obstacle_texture = load_texture("assets/non.png");
+    SDL_Texture* obstacle_texture = load_texture("assets/oui.png");
 
     // Set the initial position and state of the character
     int character_x = -290;
